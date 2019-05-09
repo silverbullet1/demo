@@ -74,7 +74,7 @@
                 "components": [
                   {
                     "type": "label",
-                    "text": "Hello {{$get.content}}",
+                    "text": "{{$get.content}}",
                     "style": {
                       "color": "#ffffff",
                       "font": "Courier",
