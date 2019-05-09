@@ -1,7 +1,7 @@
 {
   "$jason": {
     "head": {
-      "title": "Smart container App",
+      "title": "Smart container app",
       "actions": {
         "$vision.ready": {
           "trigger": "qr"
@@ -53,43 +53,54 @@
           }
         }
       },
-        "style": {
-          "border": "none"
-        },
-        "background": {
-          "type": "camera",
-          "options": {
-            "device": "back"
-          }
-        },
-        "sections": [
-          {
-            "items": [
-              {
-                "type": "vertical",
-                "href": {
-                  "url": "{{$get.content}}",
-                  "transition": "modal"
-                },
-                "components": [
-                  {
-                    "type": "label",
-                    "text": "{{$get.content}}",
-                    "style": {
-                      "color": "#ffffff",
-                      "font": "Courier",
-                      "size": "16",
-                      "padding": "10",
-                      "background": "rgba(0,0,0,0.2)"
-                    }
-                  }
-                ]
+      "templates": {
+        "body": {
+          "header": {
+            "menu": {
+              "text": "View JSON",
+              "href": {
+                "url": "https://github.com/Jasonette/Jasonpedia/blob/gh-pages/action/vision/index.json",
+                "view": "web"
               }
-            ]
-          }
-        ]
+            }
+          },
+          "style": {
+            "border": "none"
+          },
+          "background": {
+            "type": "camera",
+            "options": {
+              "device": "back"
+            }
+          },
+          "sections": [
+            {
+              "items": [
+                {
+                  "type": "vertical",
+                  "href": {
+                    "url": "{{$get.content}}",
+                    "transition": "modal"
+                  },
+                  "components": [
+                    {
+                      "type": "label",
+                      "text": "{{$get.content}}",
+                      "style": {
+                        "color": "#ffffff",
+                        "font": "Courier",
+                        "size": "16",
+                        "padding": "10",
+                        "background": "rgba(0,0,0,0.2)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       }
     }
   }
-}
 }
